@@ -16,3 +16,6 @@ npx jest
 ```
 
 thats, will run all file in the project that have the extension equal `test.js`
+
+ex:
+  ![image](https://user-images.githubusercontent.com/57181054/161143727-c6080dbe-b6dc-418d-8d3b-b192472a8d6a.png)
