@@ -1,2 +1,3 @@
 # js-testing
-Kent's JS testing course
+
+Kent C. Dodds JS testing course.
