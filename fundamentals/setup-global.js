@@ -19,4 +19,5 @@ function expect(actual) {
 }
 
 global.test = test;
+global.it = test;
 global.expect = expect;

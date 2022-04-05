@@ -7,6 +7,8 @@ test("testing sumAsync function", async () => {
   expect(result).toBe(expected);
 });
 
+it("testing if it block", () => {});
+
 test("testing subtractAsync function", async () => {
   const result = await subtractAsync(10, 5);
   const expected = 5;
