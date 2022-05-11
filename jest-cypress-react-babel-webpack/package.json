@@ -25,6 +25,7 @@
     "@babel/runtime": "^7.7.4",
     "@emotion/babel-preset-css-prop": "^10.0.23",
     "@emotion/jest": "^11.9.1",
+    "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
