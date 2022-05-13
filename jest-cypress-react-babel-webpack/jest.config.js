@@ -18,4 +18,5 @@ module.exports = {
       lines: 80,
     },
   },
+  displayName: 'global',
 }
