@@ -45,6 +45,7 @@
     "jest-environment-jsdom": "^28.1.0",
     "jest-runner-eslint": "^1.0.0",
     "jest-watch-select-projects": "^2.0.0",
+    "jest-watch-typeahead": "^1.1.0",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "serve": "^11.2.0",
