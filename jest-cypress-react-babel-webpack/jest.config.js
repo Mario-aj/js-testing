@@ -18,5 +18,5 @@ module.exports = {
       lines: 80,
     },
   },
-  displayName: 'global',
+  projects: ['./test/jest.lint.js'],
 }
