@@ -21,6 +21,17 @@
       "ignorePath": "./.gitignore"
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/.*+(js|json|css|html|md)": [
+      "prettier",
+      "jest --findRelatedTests"
+    ]
+  },
   "keywords": [],
   "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",
   "license": "GPL-3.0",
@@ -40,12 +51,14 @@
     "eslint-config-cypress": "^0.28.0",
     "eslint-config-kentcdodds": "^14.6.1",
     "file-loader": "^5.0.2",
+    "husky": "^8.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.0",
     "jest-environment-jsdom": "^28.1.0",
     "jest-runner-eslint": "^1.0.0",
     "jest-watch-select-projects": "^2.0.0",
     "jest-watch-typeahead": "^1.1.0",
+    "lint-staged": "^12.4.1",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "serve": "^11.2.0",

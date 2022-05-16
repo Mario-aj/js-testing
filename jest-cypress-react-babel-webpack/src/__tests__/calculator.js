@@ -11,5 +11,5 @@ test('renders', () => {
   expect(clearButton).toHaveTextContent('C')
 
   fireEvent.click(clearButton)
-  expect(clearButton).toHaveTextContent('AC')
+  expect(clearButton).toHaveTextContent('A')
 })
