@@ -15,7 +15,7 @@ function getScale(node) {
   if (actualScale < 1) {
     return actualScale * 0.9
   }
-  return 1
+  return 2
 }
 
 function AutoScalingText({children}) {
