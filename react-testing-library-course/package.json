@@ -36,11 +36,6 @@
     "test-data-bot": "^0.8.0",
     "whatwg-fetch": "^3.5.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "kcd-scripts pre-commit"
-    }
-  },
   "babel": {
     "presets": [
       "kcd-scripts/babel"
