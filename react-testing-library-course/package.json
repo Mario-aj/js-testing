@@ -23,7 +23,7 @@
     "history": "^5.0.0",
     "jest": "^26.6.3",
     "jest-axe": "^4.1.0",
-    "kcd-scripts": "^7.5.1",
+    "kcd-scripts": "^8.1.1",
     "msw": "^0.24.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
