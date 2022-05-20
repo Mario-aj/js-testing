@@ -1,4 +1,4 @@
-/* eslint-disable testing-library/no-debug */
+/* eslint-disable jest-dom/prefer-in-document */
 /* eslint-disable testing-library/prefer-screen-queries */
 import React from 'react'
 import user from '@testing-library/user-event'
@@ -7,14 +7,14 @@ import {render} from '@testing-library/react'
 import {FavoriteNumber} from '../favorite-number'
 
 test('entering an invalid value shows an error message', () => {
-  const {getByLabelText, getByRole, rerender, debug} = render(
+  const {getByLabelText, getByRole, rerender, queryByLabelText} = render(
     <FavoriteNumber />,
   )
   const input = getByLabelText(/favorite number/i)
 
   user.type(input, '10')
   expect(getByRole('alert')).toHaveTextContent(/the number is invalid/i)
-  debug()
+
   rerender(<FavoriteNumber max={10} />)
-  debug()
+  expect(queryByLabelText(/the number is invalid/i)).toBeNull()
 })
