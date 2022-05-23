@@ -7,8 +7,8 @@ import {Editor} from '../post-editor-01-markup'
 test('renders a form with title, content, tags and a submit button', () => {
   const {getByLabelText, getByText} = render(<Editor />)
 
-  getByLabelText(/title/i)
-  getByLabelText(/content/i)
-  getByLabelText(/tags/i)
-  getByText(/submit/i)
+  expect(getByLabelText(/title/i)).toBeInTheDocument()
+  expect(getByLabelText(/content/i)).toBeInTheDocument()
+  expect(getByLabelText(/tags/i)).toBeInTheDocument()
+  expect(getByText(/submit/i)).toBeInTheDocument()
 })
