@@ -3,52 +3,45 @@ import {render, act} from '@testing-library/react'
 
 import {useCounter} from '../use-counter'
 
+function setup({initialProps} = {}) {
+  const result = {}
+  function HelperComponent(initialState) {
+    result.current = useCounter(initialState)
+    return null
+  }
+
+  render(<HelperComponent {...initialProps} />)
+
+  return result
+}
+
 describe('useCounter', () => {
   it('should exposes the count and increment/decrement function', () => {
-    let result
-    function HelperComponent() {
-      result = useCounter()
+    const result = setup()
+    expect(result.current.count).toBe(0)
 
-      return null
-    }
+    act(() => result.current.increment())
+    expect(result.current.count).toBe(1)
 
-    render(<HelperComponent />)
-    expect(result.count).toBe(0)
-
-    act(() => result.increment())
-    expect(result.count).toBe(1)
-
-    act(() => result.decrement())
-    expect(result.count).toBe(0)
+    act(() => result.current.decrement())
+    expect(result.current.count).toBe(0)
   })
 
   it('allow customization of the initialState', () => {
-    const result = {}
-    function HelperComponent() {
-      result.current = useCounter({initialCount: 3})
+    const result = setup({initialProps: {initialCount: 3}})
 
-      return null
-    }
-
-    render(<HelperComponent />)
     expect(result.current.count).toBe(3)
   })
 
   it('allow customization of the step', () => {
-    let result
-    function HelperComponent() {
-      result = useCounter({step: 4})
+    const result = setup({initialProps: {step: 4}})
 
-      return null
-    }
+    expect(result.current.count).toBe(0)
 
-    render(<HelperComponent />)
-    expect(result.count).toBe(0)
+    act(() => result.current.increment())
+    expect(result.current.count).toBe(4)
 
-    act(() => result.increment())
-    expect(result.count).toBe(4)
-
-    act(() => result.decrement())
-    expect(result.count).toBe(0)
+    act(() => result.current.decrement())
+    expect(result.current.count).toBe(0)
   })
 })
