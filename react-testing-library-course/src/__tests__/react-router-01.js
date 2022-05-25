@@ -16,3 +16,16 @@ test('main renders home within Router', () => {
 
   expect(getByRole('heading')).toHaveTextContent(/home/i)
 })
+
+test('main renders not match route', () => {
+  const history = createMemoryHistory({
+    initialEntries: ['/something-not-matches'],
+  })
+  const {getByRole} = render(
+    <Router history={history}>
+      <Main />
+    </Router>,
+  )
+
+  expect(getByRole('heading')).toHaveTextContent(/404/i)
+})
