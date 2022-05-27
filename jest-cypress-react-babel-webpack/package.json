@@ -48,9 +48,11 @@
     "@testing-library/react": "^13.2.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "cypress": "^9.7.0",
     "eslint": "^6.7.1",
     "eslint-config-cypress": "^0.28.0",
     "eslint-config-kentcdodds": "^14.6.1",
+    "eslint-plugin-cypress": "^2.12.1",
     "file-loader": "^5.0.2",
     "husky": "^8.0.1",
     "identity-obj-proxy": "^3.0.0",
@@ -62,11 +64,11 @@
     "lint-staged": "^12.4.1",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
-    "serve": "^11.2.0",
+    "serve": "^13.0.2",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
     "@emotion/core": "^10.0.22",
