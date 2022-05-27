@@ -46,6 +46,7 @@
     "@emotion/jest": "^11.9.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
+    "@webpack-cli/serve": "^1.6.1",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "cypress": "^9.7.0",
@@ -67,7 +68,7 @@
     "serve": "^13.0.2",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
+    "webpack-cli": "^4.3.0",
     "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
